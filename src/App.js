@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import './Style_Components.css';
 import './App.css';
+import List from './Component/List'
 
-function App() {
+
+export default class App extends Component {
+
+  state = {
+    vlad: 0,
+    nameH1:'Название',
+    input:'none'
+}
+
+  render() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+    <div className='main'>
+
+      <List />
+      
     </div>
   );
 }
-
-export default App;
+renameH1 = () => {
+  this.setState({
+    nameH1:this.state.input
+  })
+}
+randomclick = () => {
+  this.setState({
+      vlad:Math.round(Math.random() * 10)
+  })
+}
+handleInput = (event) => {
+  this.setState({
+    input:event.target.value
+  })
+}
+}
+ 
