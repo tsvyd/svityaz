@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import './Style_Components.css';
-import './App.css';
+import React, { Component } from 'react'
+import './Style_Components.css'
+import './App.css'
+import './Style.scss'
 import List from './Component/List'
 
 

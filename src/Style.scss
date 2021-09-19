@@ -1,0 +1,15 @@
+button{
+    padding: 8px;
+    border:1px solid black;
+    border-radius: 20px;
+    transition: 0.5s;
+    &:focus , &:active{
+        outline: none;
+    }
+
+    &:hover{
+        background: black;
+        color: white;
+        transition: 0.5s;
+    }
+}
